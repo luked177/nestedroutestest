@@ -3,5 +3,8 @@
 		"rewrite": "nested/index.html"
 	},
 	"trailingSlash": "always",
-	"allowedForwardedHosts": ["https://testswarouter-hrhxbkfrg6atdkdv.z01.azurefd.net"]
+	"globalHeaders": {
+		"Access-Control-Allow-Origin": "*",
+		"Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+	}
 }
