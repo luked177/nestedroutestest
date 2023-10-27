@@ -6,27 +6,22 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Path1 from "./Path1.jsx";
 import GuidChild from "./GuidChild.jsx";
 
-const router = createBrowserRouter(
-	[
-		{
-			path: "/",
-			element: <App />,
-			children: [
-				{
-					path: "/path1",
-					element: <Path1 />,
-				},
-				{
-					path: "/child/:guid",
-					element: <GuidChild />,
-				},
-			],
-		},
-	],
+const router = createBrowserRouter([
 	{
-		basename: "/nested",
-	}
-);
+		path: "/nested",
+		element: <App />,
+		children: [
+			{
+				path: "/nested/path1",
+				element: <Path1 />,
+			},
+			{
+				path: "/nested/child/:guid",
+				element: <GuidChild />,
+			},
+		],
+	},
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
