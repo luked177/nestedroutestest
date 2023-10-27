@@ -1,6 +1,6 @@
 {
 	"navigationFallback": {
-		"rewrite": "development/portal/index.html"
+		"rewrite": "/index.html"
 	},
 	"globalHeaders": {
 		"Access-Control-Allow-Origin": "*",
