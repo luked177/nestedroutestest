@@ -1,6 +1,6 @@
 {
 	"navigationFallback": {
-		"rewrite": "nested/index.html"
+		"rewrite": "/nested/index.html"
 	},
 	"globalHeaders": {
 		"Access-Control-Allow-Origin": "*",
