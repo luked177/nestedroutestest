@@ -1,6 +1,6 @@
 {
-	"trailingSlash": "auto",
+	"trailingSlash": "always",
 	"navigationFallback": {
-		"rewrite": "/development/portal/index.html"
+		"rewrite": "development/portal/index.html"
 	}
 }
