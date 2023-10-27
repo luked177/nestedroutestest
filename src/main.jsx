@@ -8,10 +8,10 @@ import GuidChild from "./GuidChild.jsx";
 
 const router = createBrowserRouter(
 	[
-		// {
-		// 	path: "*",
-		// 	element: <Navigate to={"/"} replace />,
-		// },
+		{
+			path: "*",
+			element: <Navigate to={"/"} replace />,
+		},
 		{
 			path: "/",
 			element: <App />,
