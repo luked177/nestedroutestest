@@ -1,5 +1,6 @@
 {
 	"navigationFallback": {
 		"rewrite": "nested/index.html"
-	}
+	},
+	"trailingSlash": "always"
 }
