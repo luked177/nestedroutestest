@@ -7,6 +7,6 @@
 		"Access-Control-Allow-Methods": "GET, POST, PUT"
 	},
 	"forwardingGateway": {
-		"allowedForwardedHosts": ["https://testswarouter-hrhxbkfrg6atdkdv.z01.azurefd.net"]
+		"allowedForwardedHosts": ["testswarouter-hrhxbkfrg6atdkdv.z01.azurefd.net"]
 	}
 }
