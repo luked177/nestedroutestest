@@ -6,5 +6,6 @@
 	"globalHeaders": {
 		"Access-Control-Allow-Origin": "*",
 		"Access-Control-Allow-Methods": "GET, POST, PUT"
-	}
+	},
+	"allowedForwardedHosts": ["https://testswarouter-hrhxbkfrg6atdkdv.z01.azurefd.net"]
 }
