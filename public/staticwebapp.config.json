@@ -1,0 +1,9 @@
+{
+	"trailingSlash": "auto",
+	"navigationFallback": {
+		"rewrite": "/development/portal/index.html"
+	},
+	"globalHeaders": {
+		"Access-Control-Allow-Origin": "*"
+	}
+}
