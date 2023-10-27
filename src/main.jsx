@@ -5,6 +5,7 @@ import "./index.css";
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Path1 from "./Path1.jsx";
 import GuidChild from "./GuidChild.jsx";
+import NestedInChild from "./NestedInChild.jsx";
 
 const router = createBrowserRouter(
 	[
@@ -23,6 +24,12 @@ const router = createBrowserRouter(
 				{
 					path: "/child/:guid",
 					element: <GuidChild />,
+					children: [
+						{
+							path: ":value",
+							element: <NestedInChild />,
+						},
+					],
 				},
 			],
 		},
