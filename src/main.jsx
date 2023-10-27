@@ -2,21 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Path1 from "./Path1.jsx";
 import GuidChild from "./GuidChild.jsx";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "*",
+		element: <Navigate to={"/nested"} replace />,
+	},
+	{
+		path: "/nested",
 		element: <App />,
 		children: [
 			{
-				path: "/path1",
+				path: "/nested/path1",
 				element: <Path1 />,
 			},
 			{
-				path: "/child/:guid",
+				path: "/nested/child/:guid",
 				element: <GuidChild />,
 			},
 		],
