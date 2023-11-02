@@ -20,10 +20,14 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Create .env file
-        run: |
-          echo 'VITE_PATHNAME="/development/portal"' > .env
-          echo 'VITE_TEST="THIS IS A TEST"' >> .env
+      # - name: Create .env file
+      #   run: |
+      #     echo 'VITE_PATHNAME="/development/portal"' > .env
+      #     echo 'VITE_TEST="THIS IS A TEST"' >> .env
+
+      - name: Run PowerShell script from file
+        shell: powershell
+        run: .\CreateEnv.ps1
 
       - name: Build And Deploy
         id: builddeploy
