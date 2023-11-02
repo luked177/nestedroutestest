@@ -6,6 +6,7 @@ import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom"
 import Path1 from "./Path1.jsx";
 import GuidChild from "./GuidChild.jsx";
 import NestedInChild from "./NestedInChild.jsx";
+import { Constants } from "./Constants.js";
 
 const router = createBrowserRouter(
 	[
@@ -34,7 +35,7 @@ const router = createBrowserRouter(
 			],
 		},
 	],
-	{ basename: import.meta.env.VITE_PATHNAME }
+	{ basename: Constants.PathName }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
