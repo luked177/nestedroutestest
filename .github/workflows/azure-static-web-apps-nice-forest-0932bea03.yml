@@ -27,7 +27,15 @@ jobs:
 
       - name: Run PowerShell script from file
         shell: pwsh
-        run: CreateEnv.ps1
+        run: |
+          $envContent = @"
+          VITE_PATHNAME="/development/portal"
+          VITE_TEST="THIS IS A TEST"
+          "@
+
+          $envFilePath = ".env"
+
+          $envContent | Set-Content -Path $envFilePath -Force
 
       - name: Build And Deploy
         id: builddeploy
