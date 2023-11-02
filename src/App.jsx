@@ -1,9 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import "./App.css";
-import { Constants } from "./Constants";
 
 function App() {
-	console.log(Constants.PathName);
+	console.log(import.meta.env.VITE_PATHNAME);
 	console.log(import.meta.env.VITE_TEST);
 	return (
 		<>
