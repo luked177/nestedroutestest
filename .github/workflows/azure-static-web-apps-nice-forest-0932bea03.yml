@@ -27,7 +27,7 @@ jobs:
 
       - name: Run PowerShell script from file
         shell: pwsh
-        run: .\CreateEnv.ps1
+        run: CreateEnv.ps1
 
       - name: Build And Deploy
         id: builddeploy
