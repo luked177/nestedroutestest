@@ -1,4 +1,8 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy Second/Test
+
+env:
+  PATHNAME: '/second/test'
+  TEST: 'THIS IS THE SECOND TEST ENV SO SHOULD BE DIFFERENT'
 
 on:
   push:
@@ -19,6 +23,19 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Run PowerShell script from file
+        shell: pwsh
+        run: |
+          $envContent = @"
+          VITE_PATHNAME=$env:PATHNAME
+          VITE_TEST=$env:TEST
+          "@
+
+          $envFilePath = ".env"
+
+          $envContent | Set-Content -Path $envFilePath -Force
+          
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

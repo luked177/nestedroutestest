@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy Development/Portal
 
 env:
   PATHNAME: '/development/portal'
