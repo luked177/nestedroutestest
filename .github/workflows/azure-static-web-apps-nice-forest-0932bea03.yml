@@ -1,5 +1,9 @@
 name: Azure Static Web Apps CI/CD
 
+env:
+  PATHNAME: '/development/portal'
+  TEST: 'THIS IS A TEST FOR ENV VARIABLES IN A PIPELINE'
+
 on:
   push:
     branches:
@@ -20,17 +24,12 @@ jobs:
           submodules: true
           lfs: false
 
-      # - name: Create .env file
-      #   run: |
-      #     echo 'VITE_PATHNAME="/development/portal"' > .env
-      #     echo 'VITE_TEST="THIS IS A TEST"' >> .env
-
       - name: Run PowerShell script from file
         shell: pwsh
         run: |
           $envContent = @"
-          VITE_PATHNAME="/development/portal"
-          VITE_TEST="THIS IS A TEST"
+          VITE_PATHNAME=$env:PATHNAME
+          VITE_TEST=$env:TEST
           "@
 
           $envFilePath = ".env"
