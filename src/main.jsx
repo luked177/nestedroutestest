@@ -34,7 +34,7 @@ const router = createBrowserRouter(
 			],
 		},
 	],
-	{ basename: "/development/portal" }
+	{ basename: import.meta.env.VITE_PATHNAME }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(

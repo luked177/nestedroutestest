@@ -19,6 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Create .env file
+        run: |
+          echo 'VITE_PATHNAME="/development/portal"' > .env
+        working-directory: $GITHUB_WORKSPACE
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

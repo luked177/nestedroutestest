@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
+	console.log(import.meta.env.VITE_PATHNAME);
 	return (
 		<>
 			<p>This is a test for nested routes</p>
